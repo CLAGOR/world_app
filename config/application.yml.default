@@ -1,0 +1,5 @@
+DB_USER: your_db_username
+DB_PASS: your_db_password
+HEROKU_DB: heroku_db_name
+HEROKU_DB_USER: heroku_db_username
+HEROKU_DB_PASS: heroku_db_password
