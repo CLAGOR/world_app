@@ -1,0 +1,11 @@
+<img src="Misc_Map_400645.jpg" width="1920" height="1080" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:prales -->
+<area shape="poly" coords="811,333,828,331,840,316,839,312,848,301,854,300,860,293,860,290,845,288,835,285,798,282,792,286,793,292,806,295,800,311,801,315,798,326,805,329,806,333" href="http://localhost:3000/pages/country" />
+<area shape="poly" coords="923,212,926,230,953,241,963,241,969,245,972,236,976,233,972,222,975,217,968,207,965,209,943,207,924,211" href="http://google.com" />
+</map>
