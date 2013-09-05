@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WorldApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+    <title><%= (yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>    
+    <div class="container">
+      <%= render 'layouts/continents_navbar' %>
+      <%= yield %>
+      <%#= image_tag("Misc_Map_400645.jpg", :alt => "background_map") %> 
+      <%= render 'layouts/sidebar' %>
+    </div>
+  </body>
 </html>

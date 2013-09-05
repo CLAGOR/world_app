@@ -1,4 +1,17 @@
 WorldApp::Application.routes.draw do
+  
+  match 'pages/home',          to: 'pages#home',          via: 'get';
+  match 'pages/country',       to: 'pages#country',       via: 'get';
+  match 'pages/about',         to: 'pages#about',         via: 'get';
+  match 'pages/north_america', to: 'pages#north_america', via: 'get';
+  match 'pages/south_america', to: 'pages#south_america', via: 'get';
+  match 'pages/europe',        to: 'pages#europe',        via: 'get';
+  match 'pages/africa',        to: 'pages#africa',        via: 'get';
+  match 'pages/asia',          to: 'pages#asia',          via: 'get';
+  match 'pages/australia',     to: 'pages#australia',     via: 'get';
+#  get "pages/home"
+#  get "pages/country"
+#  get "pages/about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
