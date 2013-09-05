@@ -1,14 +1,13 @@
 WorldApp::Application.routes.draw do
-  match '/', to: 'pages#home', via: 'get'
-  match 'pages/home',          to: 'pages#home',          via: 'get'
-  match 'pages/country',       to: 'pages#country',       via: 'get'
-  match 'pages/about',         to: 'pages#about',         via: 'get'
-  match 'pages/north_america', to: 'pages#north_america', via: 'get'
-  match 'pages/south_america', to: 'pages#south_america', via: 'get'
-  match 'pages/europe',        to: 'pages#europe',        via: 'get'
-  match 'pages/africa',        to: 'pages#africa',        via: 'get'
-  match 'pages/asia',          to: 'pages#asia',          via: 'get'
-  match 'pages/australia',     to: 'pages#australia',     via: 'get'
+    get "" => "pages#home", as: "pages_home"
+    get "country" => "pages#country", as: "pages_country"
+    get "about" => "pages#about", as: "pages_about"
+    get "na" => "pages#north_america", as: "pages_north_america"
+    get "sa" => "pages#south_america", as: "pages_south_america"
+    get "eu" => "pages#europe", as: "pages_europe"
+    get "af" => "pages#africa", as: "pages_africa"
+    get "as" => "pages#asia", as: "pages_asia"
+    get "au" => "pages#australia", as: "pages_australia"
 #  get "pages/home"
 #  get "pages/country"
 #  get "pages/about"
@@ -61,7 +60,7 @@ WorldApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-#  root :to => 'pages#home'
+  root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
 
