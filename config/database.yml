@@ -21,3 +21,13 @@ test:
   username: root  
   password: forever24
   host: 127.0.0.1
+
+production:  
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: d924ef4opdu796
+  username: ajhqnwzwlgyzgl
+  password: 4UpFJNToP1Y-yurtprXzgCgsf3
+  host: ec2-54-221-236-207.compute-1.amazonaws.com
+  port: 5432
