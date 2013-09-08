@@ -1,16 +1,14 @@
 WorldApp::Application.routes.draw do
-    get "" => "pages#home", as: "pages_home"
-    get "country" => "pages#country", as: "pages_country"
-    get "about" => "pages#about", as: "pages_about"
-    get "na" => "pages#north_america", as: "pages_north_america"
-    get "sa" => "pages#south_america", as: "pages_south_america"
-    get "eu" => "pages#europe", as: "pages_europe"
-    get "af" => "pages#africa", as: "pages_africa"
-    get "as" => "pages#asia", as: "pages_asia"
-    get "au" => "pages#australia", as: "pages_australia"
-#  get "pages/home"
-#  get "pages/country"
-#  get "pages/about"
+  get "" => "pages#home", as: "pages_home"
+  get "country" => "pages#country", as: "pages_country"
+  get "about" => "pages#about", as: "pages_about"
+  get "na" => "pages#north_america", as: "pages_north_america"
+  get "sa" => "pages#south_america", as: "pages_south_america"
+  get "eu" => "pages#europe", as: "pages_europe"
+  get "af" => "pages#africa", as: "pages_africa"
+  get "as" => "pages#asia", as: "pages_asia"
+  get "au" => "pages#australia", as: "pages_australia"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
