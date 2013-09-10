@@ -8,7 +8,6 @@ WorldApp::Application.routes.draw do
   get "af" => "pages#africa", as: "pages_africa"
   get "as" => "pages#asia", as: "pages_asia"
   get "au" => "pages#australia", as: "pages_australia"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
