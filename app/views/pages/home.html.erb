@@ -1,5 +1,6 @@
 <% provide(:title, 'Home') %>
 <%= image_tag("Misc_Map_400645.jpg", :usemap => "#map") %>
+
 <map name="map">
   <% @countries.each do |country| %>
     <%= map_area country %>
@@ -7,10 +8,4 @@
 </map>
 
 <div id="country-info" style="display:none">
-</div>
-
-<div id="links" style="display:none">
-  <% @countries.each do |country| %>
-    <%= map_link country %>
-  <% end %>
 </div>

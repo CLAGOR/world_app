@@ -4,7 +4,6 @@ class PagesController < ApplicationController
 
   def country
     @country = Country.where(name: params[:name]).first
-    #render "country.js.erb", as: "JS"
   end
 
   def about
