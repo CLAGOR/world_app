@@ -23,7 +23,11 @@ $(document).ready(function(){
         
         
 //        SwitchContinents
-    });   
-    
-    
+    }); 
 });
+
+function switch_continent(cont_c, cont_id)
+    {
+        document.getElementByClass(cont_c).style.display="none";
+        document.getElementById(cont_id).style.display="inline";       
+    }
