@@ -1,15 +1,15 @@
 <navbar class="navbar navbar-inverse">
-    <div class="navbar-inner">
-        <div class="container">          
-            <ul class="nav nav-pills" id="c_nav">
-              <li class="active"><%= link_to "World",  pages_home_path %></li>
-              <li><%= link_to "North America",  pages_north_america_path %></li>
-              <li><%= link_to "South America",  pages_south_america_path %></li>
-              <li><%= link_to "Europe",  pages_europe_path %></li>
-              <li><%= link_to "Africa",  pages_africa_path %></li>              
-              <li><%= link_to "Asia",  pages_asia_path %></li>              
-              <li><%= link_to "Australia",  pages_australia_path %></li>
-            </ul>          
-        </div>
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav nav-pills" id="c_nav">
+        <%= nav_link "World", "home" %>
+        <%= nav_link "North America", "north_america" %>
+        <%= nav_link "South America", "south_america" %>
+        <%= nav_link "Europe", "europe" %>
+        <%= nav_link "Africa", "africa" %>
+        <%= nav_link "Asia", "asia" %>
+        <%= nav_link "Australia", "australia" %>
+      </ul>
     </div>
+  </div>
 </navbar>

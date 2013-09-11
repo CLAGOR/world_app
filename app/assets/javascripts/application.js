@@ -13,10 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-$(document).ready(function(){
-    $('#c_nav li').click(function() {
-        $(this).siblings('li').removeClass('active');
-        $(this).addClass('active');
-    });
-});
