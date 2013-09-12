@@ -19,15 +19,17 @@ $(document).ready(function(){
         $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
         $().text('balls');
-//        $('.cont_detail').hide();
-        
-        
+//        $('.cont_detail').hide();               
 //        SwitchContinents
-    }); 
+    });
+    
+    function switch_continent(cont_c, cont_id)
+    {
+        $("#" + cont_c).hide();
+        $("." + cont_id).show();
+        
+    }
+    
 });
 
-function switch_continent(cont_c, cont_id)
-    {
-        document.getElementByClass(cont_c).style.display="none";
-        document.getElementById(cont_id).style.display="inline";       
-    }
+
