@@ -35,22 +35,109 @@ textarea {
 
 navbar {
     
-  ul {
-    align: center;
+  ul {    
     font-size: 18px;
-  }
-  li {
-    a {
-      padding-right: 14px;
-    } 
-  }      
+    width: 100%;
+  }     
 }
 
-.navbar .nav {
-  margin: 0 5px 0 5px;
-  li {
-    a {
-      padding-right: 14px;
-    }
-  }
-}     
+.navbar .nav {  
+    margin: 0 5px 0 5px;  
+}  
+
+#details_li {
+    display: none;
+    padding-left: 12px;
+    float: right;
+    border-left: 1px solid #333;
+    pointer-events: none;
+    a {color: white;}
+}
+
+/* body */
+
+$x: 1860px;
+$y: 1046px;
+$sw: 30px;  /* width of the side switch */
+$divider: 2px;
+
+.container {
+    width: $x /2 +$sw;
+}
+
+.slide {
+    position: absolute;
+    overflow: hidden;
+    width: $x /2 +$sw;
+    height: $y /2 +$sw;
+}
+
+#rotor {
+    width: 100%;
+    height: 100%;
+}
+ 
+.side_switch {
+    position: absolute;    
+    opacity: 0.2;
+}
+#ss_horiz {
+    width: $x /2 +$sw;
+    height: $sw;    
+    left: 0;
+    bottom: 0;
+}
+#ss_vert {
+    width: $sw;
+    height: $y /2 +$sw; 
+    left: $x /2;
+    top: 0;
+}
+.rectangle {
+    background-color: grey;
+}
+#r_vert {    
+    width: $sw;
+    height: $y /2 -$divider;
+}
+#r_horiz {
+    position: absolute;
+    width: $x /2 -$divider;
+    height: $sw;
+}
+.triangle {
+    position: relative;
+    width: 0;
+    height: 0;    
+}
+#t_vert {       
+    border-top: $sw solid grey;
+    border-left: $sw solid transparent;
+}
+#t_horiz {
+    left: $x /2 -$divider;
+    bottom: 0;
+    border-bottom: $sw solid grey;
+    border-right: $sw solid transparent;
+}
+
+.map_image {
+    max-width: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $x;
+    height: $y;
+}
+
+#details_area {
+    position: relative;
+    top: 0;
+    left: $x /2 +$sw;
+    height: $y /2 +$sw;
+    width: 140px;
+    background-color: green;
+    display: none;
+}
+
+

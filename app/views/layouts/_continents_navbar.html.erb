@@ -1,14 +1,15 @@
 <navbar class="navbar navbar-inverse">
     <div class="navbar-inner">
-        <div class="container">          
+        <div class="nav_container">          
             <ul class="nav nav-pills" id="c_nav">
-              <li class="active"><%= link_to "World", "#", remote: true %></li>
-              <li><%= link_to "North America", pages_north_america_path, remote: true %></li>
-              <li class="balls"><%= link_to "South America", pages_south_america_path, remote: true %></li>
-              <li class="balls"><%= link_to "Europe", pages_europe_path, remote: true %></li>
-              <li><%= link_to "Africa", pages_africa_path, remote: true %></li>              
+              <li id="home" class="active"><%= link_to "World", "#", remote: true %></li>
+              <li id="1"><%= link_to "North America", pages_north_america_path, remote: true %></li>
+              <li id="2"><%= link_to "South America", pages_south_america_path, remote: true %></li>
+              <li id="3"><%= link_to "Europe", pages_europe_path, remote: true %></li>
+              <li id="4"><%= link_to "Africa", pages_africa_path, remote: true %></li>              
               <li><%= link_to "Asia", pages_asia_path, remote: true %></li>              
               <li><%= link_to "Australia", pages_australia_path, remote: true %></li>
+              <li id="details_li"><%= link_to "Details", remote: true %></li>
             </ul>          
         </div>
     </div>

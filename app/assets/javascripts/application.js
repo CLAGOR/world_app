@@ -18,18 +18,99 @@ $(document).ready(function(){
     $('#c_nav li').click(function() {
         $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
-        $().text('balls');
+        $().text('balls');        
 //        $('.cont_detail').hide();               
 //        SwitchContinents
+    });  
+    
+    $('#home').click(function() {
+        $(".container").animate({width: "1100px"}, 1000);
+        $("body").animate({paddingTop: "50px"}, 1000, function () {
+            $("#details_li").fadeIn(100);
+            $("#details_area").slideDown(1000);});
+    }); 
+    
+    $('#ss_vert').click(function() {
+        parseInt($("#img0").css('left'), 10) === 0 ? map_mover("horiz_r") 
+        : map_mover("horiz_l");
     });
     
-    function switch_continent(cont_c, cont_id)
-    {
-        $("#" + cont_c).hide();
-        $("." + cont_id).show();
-        
-    }
+    $('#ss_horiz').click(function() {
+        parseInt($("#img0").css('top'), 10) === 0 ? map_mover("vert_d") 
+        : map_mover("vert_u");
+    });
+    
     
 });
 
 
+function image_switch(id_out, id_in, dir) /* dir can be [vert_u, vert_d, horiz_l, horiz_r] */
+    {
+        var $current = $('#'+ id_out);
+        var $new = $('#'+ id_in);
+        switch (dir)
+        {
+        case "vert_u":
+            $new.css("top", $new.outerHeight());
+            $new.show();
+            $current.animate({top: -$current.outerHeight()});
+            $new.animate({top: 0}, function() {$current.hide();
+                                               $current.css("top", "0");} );
+            break;
+        case "vert_d":
+            $new.css("top", -$new.outerHeight());
+            $new.show();
+            $current.animate({top: $current.outerHeight()});
+            $new.animate({top: 0}, function() {$current.hide();
+                                               $current.css("top", "0");} );
+            break;
+        case "horiz_r":
+            $new.css("left", -$new.outerWidth());
+            $new.show();
+            $current.animate({left: $current.outerWidth()});
+            $new.animate({left: 0}, function() {$current.hide();
+                                                $current.css("left", "0");});
+            break;
+        case "horiz_l":
+            $new.css("left", $new.outerWidth());
+            $new.show();
+            $current.animate({left: -$current.outerWidth()});
+            $new.animate({left: 0}, function() {$current.hide();
+                                                $current.css("left", "0");});           
+            break;
+        }
+    };   
+
+function map_mover(dir) /* dir can be [vert_u, vert_d, horiz_l, horiz_r] */
+    {   
+        var $map = $("#img0");
+        var $rotor = $("#rotor");
+        switch (dir)
+        {
+        case "vert_d":
+            $rotor.hide();            
+            parseInt($map.css('left'), 10) === 0 ? $rotor.css('transform', 'scale(1,-1)') :
+                    $rotor.css('transform', 'scale(-1,-1)');
+            $map.animate({top: -456}, function() {$rotor.fadeIn(500);});
+            break;
+        case "vert_u":
+            $rotor.hide();            
+            parseInt($map.css('left'), 10) === 0 ? $rotor.css('transform', 'scale(1,1)') :
+                    $rotor.css('transform', 'scale(-1,1)');
+            $map.animate({top: 0}, function() {$rotor.fadeIn(500);});
+            break;
+        case "horiz_l":
+            $rotor.hide();            
+            parseInt($map.css('top'), 10) === 0 ? $rotor.css('transform', 'scale(1,1)') :
+                    $rotor.css('transform', 'scale(1,-1)');
+            $map.animate({left: 0}, function() {$rotor.fadeIn(500);});
+            break;
+        case "horiz_r":
+            $rotor.hide();
+            parseInt($map.css('top'), 10) === 0 ? $rotor.css('transform', 'scale(-1,1)') :
+                    $rotor.css('transform', 'scale(-1,-1)');
+            $map.animate({left: -850}, function() {$rotor.fadeIn(500);});
+            break;
+        }
+    }; 
+   

@@ -26,4 +26,3 @@ class PagesController < ApplicationController
   def australia
   end
 end
-

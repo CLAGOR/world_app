@@ -1,13 +1,30 @@
 <% provide(:title, 'Home') %>
-<div class="cont_detail">
-  <%= image_tag("Misc_Map_400645.jpg", :usemap => "#map") %>
-  <map name="map">
-  <!-- #$-:Image map file created by GIMP Image Map plug-in -->
-  <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-  <!-- #$-:Please do not edit lines starting with "#$" -->
-  <!-- #$VERSION:2.3 -->
-  <!-- #$AUTHOR:prales -->
-  <area shape="poly" coords="545,114,576,114,574,105,594,100,616,104,646,119,638,138,610,143,596,141,572,132,568,145,557,137,562,133,559,129,552,129,541,122,543,116,544,116" href="http://localhost:3000/pages/country" />
-  <area shape="rect" coords="298,25,376,46" href="http://www.google.com" />
-  </map>
-</div>  
+<%#*<div class="img_div" id="cont_detail_3">%>  
+  <div class="slide" id="cont_detail_2">
+    <%#*<div class="img_div" id="cont_detail_1">%>
+    <%= image_tag("Misc_Map_400645.jpg", :class => "map_image", :id => "img0") %>
+    <div id="rotor">  
+      <div class="side_switch" id="ss_vert">
+        <div class="rectangle" id="r_vert"></div>
+        <div class="triangle" id="t_vert"></div>        
+      </div>
+      <div class="side_switch" id="ss_horiz">
+        <div class="rectangle" id="r_horiz"></div>
+        <div class="triangle" id="t_horiz"></div>
+      </div>
+    </div>
+  </div>  
+  <div id="details_area">
+  </div>
+    <%#*<map name="map">%>
+    <%#*<!-- #$-:Image map file created by GIMP Image Map plug-in -->%>
+    <%#*<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->%>
+    <%#*<!-- #$-:Please do not edit lines starting with "#$" -->%>
+    <%#*<!-- #$VERSION:2.3 -->%>
+    <%#*<!-- #$AUTHOR:prales -->%>
+    <%#*<area shape="poly" coords="545,114,576,114,574,105,594,100,616,104,646,119,638,138,610,143,596,141,572,132,568,145,557,137,562,133,559,129,552,129,541,122,543,116,544,116" href="http://localhost:3000/pages/country" />%>
+    <%#*<area shape="rect" coords="298,25,376,46" href="http://www.google.com" />%>
+    <%#*</map>%>
+    <%#*</div>%>
+  
+<%#*</div>%>
