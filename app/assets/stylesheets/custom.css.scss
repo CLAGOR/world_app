@@ -59,7 +59,7 @@ navbar {
 
 #details_li {
     display: none;
-    padding-left: 21px;
+    padding-left: 23px;
     float: right;
     border-left: 1px solid #333;
     pointer-events: none;
@@ -150,6 +150,7 @@ $divider: 2px;
     width: 150px;    
     display: none;
     img {
+        padding: 5px 0 0 5px;
         width: 80px;
         height: 48px;
     }
