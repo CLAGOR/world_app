@@ -10,6 +10,8 @@ group :development do
   gem 'mysql2'
 end
 
+gem 'routing-filter'
+gem "i18n", "~> 0.6.5"
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'

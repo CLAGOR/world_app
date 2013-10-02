@@ -24,10 +24,10 @@ $(document).ready(function(){
     });  
     
     $('#home').click(function() {
-        $(".container").animate({width: "1100px"}, 1000);
-        $("body").animate({paddingTop: "50px"}, 1000, function () {
+        $(".container").animate({width: "1140"}, 1000, function () {
             $("#details_li").fadeIn(100);
-            $("#details_area").slideDown(1000);});
+            $("#details_area").slideDown(700);
+            });
     }); 
     
     $('#ss_vert').click(function() {
@@ -91,7 +91,7 @@ function map_mover(dir) /* dir can be [vert_u, vert_d, horiz_l, horiz_r] */
             $rotor.hide();            
             parseInt($map.css('left'), 10) === 0 ? $rotor.css('transform', 'scale(1,-1)') :
                     $rotor.css('transform', 'scale(-1,-1)');
-            $map.animate({top: -456}, function() {$rotor.fadeIn(500);});
+            $map.animate({top: -510}, function() {$rotor.fadeIn(500);});
             break;
         case "vert_u":
             $rotor.hide();            
@@ -109,7 +109,7 @@ function map_mover(dir) /* dir can be [vert_u, vert_d, horiz_l, horiz_r] */
             $rotor.hide();
             parseInt($map.css('top'), 10) === 0 ? $rotor.css('transform', 'scale(-1,1)') :
                     $rotor.css('transform', 'scale(-1,-1)');
-            $map.animate({left: -850}, function() {$rotor.fadeIn(500);});
+            $map.animate({left: -930}, function() {$rotor.fadeIn(500);});
             break;
         }
     }; 

@@ -1,8 +1,9 @@
 <% provide(:title, 'Home') %>
+<%= render 'layouts/continents_navbar' %>
 <%#*<div class="img_div" id="cont_detail_3">%>  
   <div class="slide" id="cont_detail_2">
     <%#*<div class="img_div" id="cont_detail_1">%>
-    <%= image_tag("Misc_Map_400645.jpg", :class => "map_image", :id => "img0") %>
+    <%= image_tag("World_map.jpg", :class => "map_image", :id => "img0") %>
     <div id="rotor">  
       <div class="side_switch" id="ss_vert">
         <div class="rectangle" id="r_vert"></div>
@@ -14,7 +15,18 @@
       </div>
     </div>
   </div>  
-  <div id="details_area">
+  <div class="" id="details_area">
+    <table id="details_table">
+      <tr>
+        <td><%= image_tag("#", :class => "flag") %></td>
+      </tr>
+      <tr>
+        <td>table_info</td>
+      </tr>
+      <%#*<tr>%>
+        <%#*<td>Continent:</td>%>
+      <%#*</tr>%>
+    </table>
   </div>
     <%#*<map name="map">%>
     <%#*<!-- #$-:Image map file created by GIMP Image Map plug-in -->%>

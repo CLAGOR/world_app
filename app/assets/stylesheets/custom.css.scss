@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  padding-top: 60px;
+    min-height: 660px;
+  padding-top: 50px;
 }
 
 section {
@@ -30,6 +31,12 @@ textarea {
   height: 70px;
 }
 
+/* header */
+
+.logo {
+    width: 60px;
+    height: 40px;
+}
 
 /* navigation */
 
@@ -45,9 +52,14 @@ navbar {
     margin: 0 5px 0 5px;  
 }  
 
+.navbar-inner {
+    border-radius: 5px 5px 0 0;
+    
+}
+
 #details_li {
     display: none;
-    padding-left: 12px;
+    padding-left: 21px;
     float: right;
     border-left: 1px solid #333;
     pointer-events: none;
@@ -56,8 +68,8 @@ navbar {
 
 /* body */
 
-$x: 1860px;
-$y: 1046px;
+$x: 1920px;
+$y: 1080px;
 $sw: 30px;  /* width of the side switch */
 $divider: 2px;
 
@@ -135,9 +147,12 @@ $divider: 2px;
     top: 0;
     left: $x /2 +$sw;
     height: $y /2 +$sw;
-    width: 140px;
-    background-color: green;
+    width: 150px;    
     display: none;
+    img {
+        width: 80px;
+        height: 48px;
+    }
 }
 
 
